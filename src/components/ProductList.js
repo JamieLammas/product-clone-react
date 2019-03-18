@@ -15,7 +15,7 @@ class ProductList extends Component {
   }
   
   componentDidMount() {
-    fetch("https://rideto-django-api.herokuapp.com/products")
+    fetch("http://rideto-django-api.herokuapp.com/products/")
       .then(res => res.json())
       .then(
         (result) => {
