@@ -15,7 +15,7 @@ class ProductList extends Component {
   }
   
   componentDidMount() {
-    fetch("http://rideto-django-api.herokuapp.com/products/")
+    fetch("https://rideto-django-api.herokuapp.com/products/")
       .then(res => res.json())
       .then(
         (result) => {
@@ -47,7 +47,7 @@ class ProductList extends Component {
             </div>
             
             {items.map(item => (
-              <Link key={item.id} to={{ pathname: "/detail", state: { endpoint: item.url } }} >
+              <Link key={item.id} to={{ pathname: "/detail", state: { id: item.id } }} >
                 <div  className="container" >
                   <div className="thumbnail">
                     <img src={logo} alt=" "/>

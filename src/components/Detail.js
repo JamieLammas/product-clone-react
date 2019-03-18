@@ -13,8 +13,8 @@ class Detail extends Component {
   }
   
   componentDidMount() {
-    const { endpoint } =  this.props.location.state;
-    fetch(endpoint)
+    const { id } =  this.props.location.state;
+    fetch(`https://rideto-django-api.herokuapp.com/products/${id}`)
       .then(res => res.json())
       .then(
         (result) => {
