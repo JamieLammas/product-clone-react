@@ -14,7 +14,7 @@ class Detail extends Component {
   
   componentDidMount() {
     const { id } =  this.props.location.state;
-    fetch(`https://rideto-django-api.herokuapp.com/products/${id}`)
+    fetch(`https://product-clone-django.herokuapp.com/products/${id}`, { cors: 'no-cors'})
       .then(res => res.json())
       .then(
         (result) => {
